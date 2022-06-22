@@ -68,7 +68,6 @@ const GithubProvider = ({ children }) => {
 
   const getUserRepos = (username) => {
     api.get(`users/${username}/repos`).then(({ data }) => {
-      
       setGithubState((prevState) => ({
         ...prevState,
         repositories: data,
@@ -78,7 +77,6 @@ const GithubProvider = ({ children }) => {
 
   const getUserStarred = (username) => {
     api.get(`users/${username}/starred`).then(({ data }) => {
-      
       setGithubState((prevState) => ({
         ...prevState,
         starred: data,
