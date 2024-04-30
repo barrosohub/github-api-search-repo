@@ -1,13 +1,13 @@
-import React from "react";
-import useGithub from "../../hooks/github-hooks";
-import * as S from "./styled";
+import React from 'react'
+import useGithub from '../../hooks/github-hooks'
+import * as S from './styled'
 
 const Profile = () => {
-  const { githubState } = useGithub();
+  const { githubState } = useGithub()
 
   return (
     <S.Wrapper>
-      <S.WrapperImage src={githubState.user.avatar} alt="Avatar of user" />
+      <S.WrapperImage src={githubState.user.avatar} alt='Avatar of user' />
       <S.WrapperInfoUser>
         <div>
           <h1>{githubState.user.name}</h1>
@@ -15,8 +15,8 @@ const Profile = () => {
             <h3>Username:</h3>
             <a
               href={githubState.user.html_url}
-              target="_blank"
-              rel="noreferrer"
+              target='_blank'
+              rel='noreferrer'
             >
               {githubState.user.login}
             </a>
@@ -31,7 +31,7 @@ const Profile = () => {
           </S.WrapperUserGeneric>
           <S.WrapperUserGeneric>
             <h3>Blog:</h3>
-            <a href={githubState.user.blog} target="_blank" rel="noreferrer">
+            <a href={githubState.user.blog} target='_blank' rel='noreferrer'>
               {githubState.user.blog}
             </a>
           </S.WrapperUserGeneric>
@@ -56,7 +56,7 @@ const Profile = () => {
         </S.WrapperStatusCount>
       </S.WrapperInfoUser>
     </S.Wrapper>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile
